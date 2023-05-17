@@ -4,12 +4,14 @@ const {
   DB_NAME,
   DB_USERNAME,
   DB_PASSWORD,
+  DB_PORT,
   DB_DIALECT = 'postgres'
 } = process.env;
 
 module.exports = {
   "development": {
     "host": DB_HOST,
+    "port": DB_PORT,
     "database": DB_NAME,
     "username": DB_USERNAME,
     "password": DB_PASSWORD,
@@ -17,6 +19,7 @@ module.exports = {
   },
   "test": {
     "host": DB_HOST,
+    "port": DB_PORT,
     "database": DB_NAME,
     "username": DB_USERNAME,
     "password": DB_PASSWORD,
@@ -24,6 +27,7 @@ module.exports = {
   },
   "production": {
     "host": DB_HOST,
+    "port": DB_PORT,
     "database": DB_NAME,
     "username": DB_USERNAME,
     "password": DB_PASSWORD,
