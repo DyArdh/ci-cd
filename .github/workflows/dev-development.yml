@@ -2,7 +2,7 @@ name: Deploy to Railway Prod Environment
 
 on:
   push:
-    branches: [main]
+    branches: [develop]
 
 jobs:
   deploy:
@@ -26,4 +26,4 @@ jobs:
       - name: Deploy
         run: railway up
         env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_PROD_TOKEN }}
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_DEV_TOKEN }}
