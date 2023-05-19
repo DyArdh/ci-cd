@@ -84,10 +84,8 @@ module.exports = {
     try {
       return res.status(200).json({
         status: true,
-        message: "success!",
-        data: {
-          user: req.user,
-        },
+        message: "fetch user success!",
+        data: req.user,
       });
     } catch (err) {
       throw err;
